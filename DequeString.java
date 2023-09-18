@@ -128,6 +128,19 @@ public class DequeString implements Iterable<String> {
 
             tmp.prox = atual.prox;
             tmp.ant =atual;
+
+            tmp.prox.ant = tmp;
+            atual.prox = tmp;
+
+            n++;
+
+        }
+        public String toString(){
+            StringBuilder s = new StringBuilder();
+            for (String item : this){
+                s.append(item+" ");
+            }
+            return s.toString();
         }
     }
 }
