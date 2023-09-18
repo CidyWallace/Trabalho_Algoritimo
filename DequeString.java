@@ -6,7 +6,7 @@ public class DequeString implements Iterable<String> {
     public DequeString(){
         n = 0;
         Sentinela = new No();
-        Sentinela.proximo = sentinela;
+        Sentinela.prox = Sentinela;
         Sentinela.ant = Sentinela;
     }
     private class No{
