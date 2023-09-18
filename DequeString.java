@@ -137,9 +137,8 @@ public class DequeString implements Iterable<String> {
         }
         public String toString(){
             StringBuilder s = new StringBuilder();
-            for (String item : this){
+            for (String item : this)
                 s.append(item+" ");
-            }
             return s.toString();
         }
     }
