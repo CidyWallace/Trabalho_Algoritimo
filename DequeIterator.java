@@ -14,12 +14,13 @@ public class DequeIterator implements ListIterator<Cidade> {
     public int previousIndex(){return indice -1;}
     public int nextIndex(){return indice;}
 
-    public Cidade next(){if(!hasNext())return null;}
+    public Cidade next(){
+        if(!hasNext()){return null;}
     Cidade meuDado= atual.dado;
     acessadoultimo = atual;
     atual = atual.prox;
     indice++;
-    return meuDado;
+    return meuDado;}
 
     public Cidade previous(){
         if(!hasPrevious())return null;
@@ -56,7 +57,7 @@ public class DequeIterator implements ListIterator<Cidade> {
         tmp.ant= atual;
 
         tmp.prox.ant= tmp;
-        tmp.proz=tmp;
+        tmp.prox=tmp;
         n++;
     }
     public String toString(){
@@ -70,7 +71,7 @@ public class DequeIterator implements ListIterator<Cidade> {
         Deque<String> queue= new Deque<String>();
         for(No x= Sentinela.prox; x !=Sentinela; x = x.prox){
             queue.push_back(x.chave);}
-        return queue
+        return queue;
     }
     public static void mais(String[] args){
         if (args.length <2){
