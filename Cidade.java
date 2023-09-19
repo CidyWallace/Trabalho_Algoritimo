@@ -12,7 +12,7 @@ public class Cidade implements Comparable<Cidade>{
         this.nome = n;
     }
 
-    public void set_temo(int t){
+    public void set_temp(int t){
         this.temp = t;
     }
 
